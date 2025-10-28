@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeTuner-Anime & Manga Guider</title>
+  <link rel="stylesheet" href="taiju.css">
+</head>
+<body>
+  <header>
+    <h1>AnimeTuner</h1>
+    <p>Your personal anime & manga companion</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('guide')">🎭 Anime Guide</button>
+    <button onclick="showSection('trending')">🔥 Trending</button>
+    <button onclick="showSection('updates')">🗓 Updates</button>
+    <button onclick="showSection('songs')">🎵 Songs</button>
+    <button onclick="showSection('manga')">📚 Manga</button>
+    <button onclick="showSection('community')">💬 Community</button>
+  </nav>
+
+  <main>
+    <!-- Anime Guide -->
+    <section id="guide" class="content-section active">
+      <h2>🎭 Anime Guider</h2>
+      <p>Choose your mood or interest to get personalized recommendations:</p>
+      <select id="moodSelect" onchange="suggestAnime()">
+        <option value="">Select Mood</option>
+        <option value="action">⚔️ Action</option>
+        <option value="romance">💖 Romance</option>
+        <option value="comedy">😂 Comedy</option>
+        <option value="sad">😢 Emotional</option>
+        <option value="fantasy">🌌 Fantasy</option>
+      </select>
+      <div id="animeSuggestion"></div>
+    </section>
+
+    <!-- Trending Section -->
+    <section id="trending" class="content-section">
+      <h2>🔥 Trending Animes</h2>
+      <div class="cards">
+        <div class="card"><img src="https://cdn.myanimelist.net/images/anime/1988/133791.jpg" alt="Jujutsu Kaisen"><p>Jujutsu Kaisen</p></div>
+        <div class="card"><img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" alt="Attack on Titan"><p>Attack on Titan</p></div>
+        <div class="card"><img src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg" alt="Demon Slayer"><p>Demon Slayer</p></div>
+      </div>
+    </section>
+
+    <!-- Updates -->
+    <section id="updates" class="content-section">
+      <h2>🗓 Upcoming Anime Updates</h2>
+      <ul id="updatesList"></ul>
+    </section>
+
+    <!-- Songs -->
+    <section id="songs" class="content-section">
+      <h2>🎵 Anime Songs</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=pmanD_s7G3U" target="_blank">Gurenge - Demon Slayer</a></li><br>
+        <li><a href="https://www.youtube.com/watch?v=8nR2l4s3mPU" target="_blank">Unravel - Tokyo Ghoul</a></li><br>
+        <li><a href="https://www.youtube.com/watch?v=5FjWe31S_0g" target="_blank">Blue Bird - Naruto</a></li><br>
+      </ul>
+    </section>
+
+    <!-- Manga -->
+    <section id="manga" class="content-section">
+      <h2>📚 Manga Guider</h2>
+      <p>Find manga similar to your favorite anime!</p>
+      <input type="text" id="mangaInput" placeholder="Enter an anime name...">
+      <button onclick="suggestManga()">Find Manga</button>
+      <div id="mangaResult"></div>
+    </section>
+
+    <!-- Community -->
+    <section id="community" class="content-section">
+      <h2>💬 Community Chat</h2>
+      <div class="chat-box" id="chatBox">
+        <p><strong>Hana:</strong> Anyone watching the new season of One Piece?</p>
+        <p><strong>Ryu:</strong> Yes!! The animation is insane 🔥</p>
+      </div>
+      <input type="text" id="chatInput" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </section>
+  </main>
+
+  <footer>
+    <p> Powered by AnimeTuner | Anime & Manga Guider</p>
+  </footer>
+
+  <script src="xeno.js"></script>
+</body>
+</html>

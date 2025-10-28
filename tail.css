@@ -1,0 +1,82 @@
+body {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 0;
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  color: #ffccf9;
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #ffccf9;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover, .active {
+  color: #f72585;
+  text-shadow: 0 0 10px #f72585;
+}
+
+.updates {
+  padding: 30px;
+}
+
+.update-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.update-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255,255,255,0.15);
+  transition: 0.3s;
+}
+
+.update-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.update-card h3 {
+  color: #ffccf9;
+  margin-bottom: 8px;
+}
+
+.update-card p {
+  color: #ddd;
+}
+
+.update-card span {
+  display: inline-block;
+  margin-top: 10px;
+  background: #f72585;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 14px;
+}
